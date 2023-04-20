@@ -38,8 +38,7 @@ nav ul li{
 
     display: inline-block;
     list-style: none;
-    margin: 20px 10px;
-
+    margin: 50px 20px;
 }
 
 nav ul li a{
@@ -140,96 +139,4 @@ nav ul li a:hover::after{
     width: 50%;
 
 }
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px -10px;
-}
-.tab-contents ul li span{
-    color: #ff003f;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-/* ---------portfolio--------- */
 
-#portfolio{
-    padding: 100px 0;
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minma(20px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    transition: height 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    font-size: 30px;
-    margin-top: 30px;
-    color: #ff004f;
-    text-decoration: none;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-}
-.work:hover .layer{
-    height: 100%
-}
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: scale 0.5s;
-}
-.btn:hover{
-    background: #ff004f;
-    transform: scale(1.01);
-}
