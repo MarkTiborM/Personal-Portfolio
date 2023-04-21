@@ -233,3 +233,7 @@ nav ul li a:hover::after{
     background: #ff004f;
     transform: scale(1.01);
 }
+.links{
+color: #ff0000;
+
+}
