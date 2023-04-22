@@ -1,7 +1,7 @@
 
 *{
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
@@ -23,7 +23,7 @@ body,html {
 }
 
 nav{
-
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -35,15 +35,12 @@ nav{
 }
 
 nav ul li{
+
     display: inline-block;
     list-style: none;
-<<<<<<< Updated upstream
-    margin: 50px 20px;
-=======
     margin: 20px 10px;
->>>>>>> Stashed changes
-}
 
+}
 
 nav ul li a{
 
@@ -51,7 +48,9 @@ nav ul li a{
     text-decoration: none;
     font-size: 25px;
     position: relative;
-
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
     
 nav ul li a::after{
@@ -81,10 +80,10 @@ nav ul li a:hover::after{
 
 }
 .header-text h1 span{
-    color: #ff0000;
+    color: #ff004f;
 }
 .header-text a{
-    color: #ff0000;
+    color: #ff004f;
 }
 
 /*-----------about-----------*/
@@ -106,21 +105,17 @@ nav ul li a:hover::after{
     border-radius: 15px;
 }
 .about-col-2{
+    font-size: 25px;
     flex-basis: 60%;
 }
 
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
 }
 .tab-links{
     margin-right: 18px;
-    font-size: 18px;
+    font-size: 30px;
     cursor: pointer;
     position: relative;
 
@@ -141,4 +136,105 @@ nav ul li a:hover::after{
     width: 50%;
 
 }
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px -10px;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ---------portfolio--------- */
 
+#portfolio{
+    padding: 200px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minma(20px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    font-size: 30px;
+    margin-top: 30px;
+    color: #ff004f;
+    text-decoration: none;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: scale 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+    transform: scale(1.01);
+}
+/*--contact--*/
+.links{
+font-size: 14px;
+text-align: center;
+}
+.contact-information{
+    font-size: 20px;
+    text-align: center;
+}
