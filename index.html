@@ -18,23 +18,17 @@
             <link rel="stylesheet" href="style.css">
     </head>
 
-    <div class="container">
+    <div class="container" id="container">
         <nav>
-            <ul>
-                <i class="fa-solid fa-house"></i>
+            <ul id="sidemenu">
                 <li><a href="#home">Home</a></li>
-                <i class="fa-solid fa-user"></i>
-                <li><a href="#about">About</a></li></i>
-                <li>
-                </i></i>
-                <li><a href="">|</a></li></i>
-                <li>
-                    <i class="fa-solid fa-image-portrait"></i></i>
-                <li><a href="#portfolio">Portfolio</a></li></i>
-                <li>
-                    <i class="fa-solid fa-phone"></i></i>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+                
             </ul>
+            <i name="cancel" class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
     <div class="header-text">
@@ -44,7 +38,7 @@
 
     </div>
     </div>
-    <!----------about------------------->
+    <!----------about---------->
     <div id="about">
         <div class="conatainer">
             <div class="row">
@@ -127,7 +121,7 @@
                           </div>
                           
                           
-                <!------contact------>
+                <!------contact button------>
 
                 <div>
                     <a href="#contact" class="btn" id="see-more">CONTACT</a>
@@ -135,15 +129,16 @@
                       <!-- Contact form code -->
                       <div id="contact">
                         <div class="contact-right">
-                            <form>
+                            <form name="submit-to-google-sheet">
                                 <input type="text" name="Name" placeholder="Your Name" required>
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
                                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                                <button type="submit">Submit</button>
+                                <button type="submit" name="btn2">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
@@ -168,14 +163,13 @@
                 
             }
         </script>
+        
 <!--Load More-->
+
         <script>
         const loadMoreButton = document.getElementById('load-more-button');
         loadMoreButton.addEventListener('click', loadMoreContent);
-  
-        function loadMoreContent() {
-      // your code to load more content goes here
-        }
+
         </script>
         <script>
             const seeMoreButton = document.getElementById('see-more');
@@ -188,11 +182,32 @@
                 contactForm.style.display = 'none';
               }
             });
-          </script>
-          
+        </script>
+<!--iphone functionality-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
 
+    function openmenu() {
+        sidemenu.style.right = "300px";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-300px";
+    }
+</script>
+<!--Contact Form-->
 
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxp7cL6wExxM5BVaX8wNjuFQH7DcAg-wX5piyh3AD7JgQzmnuDDEVn16IU-aFcv5Uef/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
+</body>
 
-
-        </html>
+</html>
