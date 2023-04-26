@@ -145,7 +145,13 @@ nav ul li a:hover::after{
 /* ---------portfolio--------- */
 
 #portfolio{
+    align-items: center;
     padding: 200px 0;
+}
+#portfolio h1{
+    padding: 20px 0px;
+    font-size: 50px;
+    align-items: center;
 }
 .work-list{
     display: grid;
@@ -157,6 +163,7 @@ nav ul li a:hover::after{
     overflow: hidden;
 }
 .work{
+    align-items: center;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -221,7 +228,7 @@ nav ul li a:hover::after{
     transform: scale(1.01);
 }
 /*--contact--*/
-.links{
+#links{
 font-size: 14px;
 text-align: center;
 }
@@ -269,6 +276,9 @@ nav .fas{
     display: none;
 }
 @media only screen and (max-width: 600px){
+    #sidemenu{
+        padding: 10px 140px;
+    }
     #header{
         background-image: url(images/background-2.png)
     }
@@ -284,15 +294,7 @@ nav .fas{
         display: block;
         font-size: 25px;
     }
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-    }
+
     nav ul li{
         display: block;
         margin: 25px;

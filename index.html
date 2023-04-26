@@ -11,24 +11,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" <style type="text/css">
-        <title> Mark. - Personal Porfolio </title>
+        <title>Mark.</title>
         </style>
         <link href="https://fonts.googleapis.com/css?family=Roboto">
         <div id="header">
             <link rel="stylesheet" href="style.css">
     </head>
 
-    <div class="container" id="container">
+    <div class="container">
         <nav>
             <ul id="sidemenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <li><a href="#links">Contact</a></li>
                 
             </ul>
-            <i name="cancel" class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
     <div class="header-text">
@@ -93,7 +91,7 @@
         <!------Portfolio------>
         <div id="portfolio">
             <div class="container">
-                <h1 class="sub-title">My Work</h1>
+                <h1 class="sub-title">My Work:</h1>
                 <div class="work-list">
                     <div class="work">
                         <img src="images/Distribution of Claims.jpg">
@@ -106,7 +104,7 @@
                     </div>
 
 
-                    <div class="links">
+                    <div id="links">
                         <a href="https://github.com/MarkTiborM" style="color:#ff004f;" target="_blank"> <i
                                 class="fa-brands fa-github fa-4x"></i></a>
                         <a href="https://www.linkedin.com/in/mark-mezei-b99190272/" style="color:#ff004f;"
@@ -123,7 +121,6 @@
                           
                 <!------contact button------>
 
-                <div>
                     <a href="#contact" class="btn" id="see-more">CONTACT</a>
                     <div id="contact" style="display: none;">
                       <!-- Contact form code -->
@@ -139,7 +136,6 @@
                     </div>
                 </div>
 
-            </div>
 
 
 
@@ -183,16 +179,6 @@
               }
             });
         </script>
-<!--iphone functionality-->
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu() {
-        sidemenu.style.right = "300px";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-300px";
-    }
 </script>
 <!--Contact Form-->
 
