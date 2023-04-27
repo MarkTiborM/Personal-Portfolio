@@ -13,28 +13,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" <style type="text/css">
         <title>Mark.</title>
         </style>
-        <link href="https://fonts.googleapis.com/css?family=Roboto">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <div id="header">
             <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
     </head>
 
+    <!--Jump to the Top-->
+    <div class="arrow">
+        <a href="#"> <i class="fas fa-shuttle-space fa-rotate-90"></i></a>
+        
+    </div>
+    
+
+
     <div class="container">
+    <div class="hidden">
         <nav>
             <ul id="sidemenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#links">Contact</a></li>
-                
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
+</div>
     <div class="header-text">
+        <div class="hidden">
         <p>Data Analyst / Web Design Student</p>
         <h1>Hi, I'm <a href="https://linktr.ee/tibbsterr" target="_blank">Mark</a> <br>from San Diego, California</h1>
     </div>
-
+    </div>
     </div>
     </div>
     <!----------about---------->
@@ -42,7 +52,9 @@
         <div class="conatainer">
             <div class="row">
                 <div class="about-col-1">
+                  <div class="hidden">
                     <img src="images/DSC_0989.png">
+                </div>  
                 </div>
                 <div class="about-col-2">
 
@@ -63,6 +75,7 @@
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
+                        
                         <ul>
                             <li><span>UI/UX</span> <i class="fa-brands fa-react"></i> <br>Designing Web interfaces with
                                 React/Django</li>
@@ -91,6 +104,7 @@
 
         <!------Portfolio------>
         <div id="portfolio">
+        <div class="hidden">   
             <div class="container">
                 <h1 class="sub-title">My Work:</h1>
                 <div class="work-list">
@@ -103,6 +117,7 @@
                             <a href="https://github.com/MarkTiborM/Analyzing-Legal-Claims" target="_blank">🔗</h1>
                         </div>
                     </div>
+                </div> 
 
 
                     <div id="links">

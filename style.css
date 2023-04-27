@@ -10,6 +10,46 @@ body,html {
     color: #fff;
     scroll-behavior: smooth;
 }
+
+/* Jump to the Top */
+
+.arrow{
+    
+    max-height: 80px;
+    position:fixed;
+    right:30px;
+    bottom:30px;
+}
+.fas{
+    font-size: 40px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.fas:hover{
+    -webkit-transform: rotate(270deg);
+}
+.fas:active{
+    color:#ff004f;
+   transition: .1s;
+   -webkit-transform: rotate(270deg);
+}
+
+
+/* Transitions */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* Header */
+
 #header {
     width: 100%;
     height: 100vh;
@@ -22,7 +62,6 @@ body,html {
 }
 nav{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -48,7 +87,7 @@ nav ul li a{
     font-size: 25px;
     position: relative;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.3px;
     -webkit-text-stroke-color: black;
 }
 nav ul li a::after{
@@ -146,7 +185,7 @@ nav ul li a:hover::after{
 
 #portfolio{
     align-items: center;
-    padding: 200px 0;
+    padding: 50px 0;
 }
 #portfolio h1{
     padding: 20px 0px;
