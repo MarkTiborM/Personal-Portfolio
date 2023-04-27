@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -24,16 +23,17 @@ body,html {
     font-size: 40px;
     color: #ffffff;
     transition: 0.5s;
-}
-.fas:hover{
-    -webkit-transform: rotate(270deg);
-}
-.fas:active{
-    color:#ff004f;
-   transition: .1s;
-   -webkit-transform: rotate(270deg);
+    transform: rotate(-225deg);
 }
 
+.fas:hover{
+    -webkit-transform: rotate(-45deg);
+}
+
+.fas:active{
+    color:#ff004f;
+    transition: .1s;
+}
 
 /* Transitions */
 .hidden {
