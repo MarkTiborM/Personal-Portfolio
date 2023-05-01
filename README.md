@@ -1,6 +1,6 @@
 # Personal-Portfolio
 ## My own personal Portfolio Website utilizing HTML and CSS
-
+https://markmezei.com
 #### The front page has a beatiful scroll animation that plays right from the beginning
 ![website screenshot](https://user-images.githubusercontent.com/129571496/235328795-f3ca8e65-7162-4cb0-a2be-4ee898cfc206.PNG)
 ### After scrolling you are introduced into the About Me Section
