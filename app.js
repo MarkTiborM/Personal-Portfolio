@@ -18,15 +18,16 @@ hiddenElements.forEach((el) => observer.observe(el));
  */
 
 // get rocketShip element
-var rocketShip = document.querySelector('i.fas.fa-rocket');
+var rocketShip = document.querySelector('i.fas.material-symbols-outlined');
 
 // listen to page scroll events
 addEventListener("scroll", (event) => {
     // detects if window is at the top of the page
     if (window.scrollY <= 0) {
         // revert ship back to normal
-        rocketShip.classList.remove('fa-rocket-launch');
-        rocketShip.classList.add('fa-rocket');
+        rocketShip.textContent = "rocket"
+        rocketShip.classList.add("fas");
+        rocketShip.classList.remove("rocket-launch-correct");
         rocketShip.style = "color: #ffffff;"
     }
 });
@@ -36,8 +37,9 @@ addEventListener("scroll", (event) => {
  */
 function launchRocket() {
     // change ship icon
-    rocketShip.classList.remove('fa-rocket');
-    rocketShip.classList.add('fa-rocket-launch');
+    rocketShip.innerHTML = "rocket_launch"
+    rocketShip.classList.remove("fas");
+    rocketShip.classList.add("rocket-launch-correct");
     rocketShip.style = "color: #ff004f;"
     
     // scroll to top of page
