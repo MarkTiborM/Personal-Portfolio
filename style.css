@@ -49,7 +49,7 @@ body,html {
     transform: translateX(0);
 }
 
-/* --------background image-------- */
+/* --------Background Image-------- */
 
 #header {
     width: 100%;
@@ -62,7 +62,7 @@ body,html {
 /* --------sidemenu-------- */
 
 .container{
-    padding: 35px 30%; 
+    padding: 45px 30%; 
 }
 nav{
     display: flex;
@@ -174,9 +174,10 @@ nav ul li a:hover::after{
 }
 .tab-links.active-link::after{
     width: 50%;
-    transition: opacity 0.3 ease-out, visibility 0.1s 0.1s linear;
+
 }
 .tab-contents ul li{
+    list-style: none;
     margin: 10px -10px;
 }
 .tab-contents ul li span{
