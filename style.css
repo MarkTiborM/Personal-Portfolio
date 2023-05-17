@@ -10,7 +10,7 @@ body,html {
     scroll-behavior: smooth;
 }
 
-/* --------jump to the top button-------- */
+/* Jump to the Top */
 
 .arrow{
     
@@ -35,8 +35,7 @@ body,html {
     transition: .1s;
 }
 
-/* --------transitions-------- */
-
+/* Transitions */
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -49,7 +48,7 @@ body,html {
     transform: translateX(0);
 }
 
-/* --------Background Image-------- */
+/* Header */
 
 #header {
     width: 100%;
@@ -58,11 +57,8 @@ body,html {
     background-size: cover;
     background-position: center;
 }
-
-/* --------sidemenu-------- */
-
 .container{
-    padding: 45px 30%; 
+    padding: 4px 30%; 
 }
 nav{
     display: flex;
@@ -88,10 +84,10 @@ nav ul li a{
 
     color: #fff;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
     -webkit-text-stroke-color: black;
 }
 nav ul li a::after{
@@ -107,21 +103,17 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-
-/* --------header-------- */
-
 .header-text{
     margin-top: 20%;
     font-size: 30px;
-    padding: 10px 10%;
-
+    padding: 15px 10%;
 }
 .header-text h1{
     font-size: 60;
     margin-top: 20px;
     position: relative;
     padding: 1px 5%;
- 
+
 }
 .header-text h1 span{
     color: #ff004f;
@@ -131,7 +123,6 @@ nav ul li a:hover::after{
 }
 
 /*-----------about-----------*/
-
 #about{
     padding: 80px 50px;
     color: #ababab;
@@ -276,7 +267,7 @@ nav ul li a:hover::after{
     background: #ff004f;
     transform: scale(1.01);
 }
-/* --------contact-------- */
+/*--contact--*/
 #links{
 font-size: 14px;
 text-align: center;
@@ -320,7 +311,7 @@ nav ul i{
 margin: -30px -190px;
 }
 
-/* --------css for small screens-------- */
+/*--css for small screens */
 nav .fas{
     display: none;
 }
