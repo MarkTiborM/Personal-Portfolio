@@ -3,6 +3,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 <body>
     <head>
@@ -19,31 +21,26 @@
             <link rel="stylesheet" href="style.css">
         <script defer src="app.js"></script>
     </head>
-
-    <!--Jump to the Top-->
-    <div class="arrow">
-        <a>
-            <i class="fas material-symbols-outlined" onclick="launchRocket()">rocket</i>
-        </a>
-    </div>
     
 
 
-    <div class="container">
+<div class="container">
     <div class="hidden">
         <nav>
             <ul id="sidemenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#links">Contact</a></li>
+                <li><a href="#see-more">Contact</a></li>
             </ul>
         </nav>
     </div>
 </div>
     <div class="header-text">
         <div class="hidden">
+        <div class="none">
         <p>VMware Administrator Student Assistant at CSUSB</p>
-        <h1>Hi, I'm Mark</a> <br>Aspiring Cybersecurity Professional</h1>
+        </div>
+        <h1>Hi, I'm Mark,</a> <br>Aspiring Cybersecurity Professional</h1>
     </div>
     </div>
     </div>
@@ -60,97 +57,95 @@
                         <img src="images/FlareVM.png">
                         <div class="layer">
                             <h3>Cloud-Hosted-Malware-Analysis</h3>
-                            <p>Set up an Amazon server that will host a Windows with FlareVM that can be used to supply a virtual network that can transfer malicious files.</p>
+                            <p>Set up an Amazon server with FlareVM for Malware Analysis</p>
                             <a href="https://github.com/MarkTiborM/Cloud-Hosted-Malware-Analysis" target="_blank">🔗</h1>
                         </div>
                     </div>
 
-
-                    <div id="links">
-                        <a href="https://github.com/MarkTiborM" style="color:#ff004f;" target="_blank"> <i
-                                class="fa-brands fa-github fa-4x"></i></a>
-                        <a href="https://www.linkedin.com/in/mark-mezei-b99190272/" style="color:#ff004f;"
-                            target="_blank"> <i class="fa fa-linkedin-square fa-4x"></i></a>
-                        <div class="contact-information">
-                        </div>
-
-
-                            </div>
-                          </div>
-                                  
-                <!------contact button------>
-
-                    <a href="#contact" class="btn" id="see-more">CONTACT ME</a>
-                    <div id="contact" style="display: none;">
-                      <!-- Contact form code -->
-                      <div id="contact">
-                        <div class="contact-right">
-                            <form name="submit-to-google-sheet">
-                                <input type="text" name="Name" placeholder="Your Name" required>
-                                <input type="email" name="Email" placeholder="Your Email" required>
-                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                                <button type="submit" name="btn2">Submit</button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
+            </div>
+<!------contact button------>
 
+<a href="#contact" class="btn" id="see-more">CONTACT ME</a>
 
+<div id="contact" style="display: none;">
+  <!-- Contact form code -->
+  <div class="contact-right">
+    <form name="submit-to-google-sheet">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" name="btn2">Submit</button>
+    </form>
+  </div>
+</div>
 
-        <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            var contacts = document.getElementsByClassName("contact");
-            function opentab(tabname) {
-                for (tablink of tablinks) {
-                    tablink.classList.remove("active-link");
-                }
-                for (tabcontent of tabcontents) {
-                    tabcontent.classList.remove("active-tab");
-                }
-                for (contact of contacts) {
-                    tabcontent.classList.remove("contact");
-                }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-                
-            }
-        </script>
-        
-<!--Load More-->
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  var contacts = document.getElementsByClassName("contact");
 
-        <script>
-        const loadMoreButton = document.getElementById('load-more-button');
-        loadMoreButton.addEventListener('click', loadMoreContent);
-
-        </script>
-        <script>
-            const seeMoreButton = document.getElementById('see-more');
-            const contactForm = document.getElementById('contact');
-          
-            seeMoreButton.addEventListener('click', function() {
-              if (contactForm.style.display === 'none') {
-                contactForm.style.display = 'block';
-              } else {
-                contactForm.style.display = 'none';
-              }
-            });
-        </script>
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+    for (contact of contacts) {
+      contact.classList.remove("contact");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
 </script>
-<!--Contact Form-->
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxp7cL6wExxM5BVaX8wNjuFQH7DcAg-wX5piyh3AD7JgQzmnuDDEVn16IU-aFcv5Uef/exec'
-    const form = document.forms['submit-to-google-sheet']
+<!-- Load More (Assumes #load-more-button exists somewhere) -->
+<script>
+  const loadMoreButton = document.getElementById('load-more-button');
+  loadMoreButton.addEventListener('click', loadMoreContent);
+</script>
+
+<!-- Show/Hide Contact Form -->
+<script>
+  const seeMoreButton = document.getElementById('see-more');
+  const contactForm = document.getElementById('contact');
+
+  seeMoreButton.addEventListener('click', function () {
+    if (contactForm.style.display === 'none') {
+      contactForm.style.display = 'block';
+    } else {
+      contactForm.style.display = 'none';
+    }
+  });
+</script>
+
+<!-- Contact Form Submit to Google Sheets -->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxp7cL6wExxM5BVaX8wNjuFQH7DcAg-wX5piyh3AD7JgQzmnuDDEVn16IU-aFcv5Uef/exec'; // replace with your URL
+  const form = document.forms['submit-to-google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        alert('Message sent successfully!');
+        form.reset(); // clear form
+        contactForm.style.display = 'none'; // optionally hide again
+      })
+      .catch(error => console.error('Error!', error.message));
+  });
+</script>
+
   
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
 
+    <div class="social-footer">
+        <a href="https://instagram.com/tibbsterr" target="_blank"><i class="fab fa-instagram "></i></a>
+        <a href="https://github.com/https://github.com/MarkTiborMe" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="linkedin.com/in/mark-mezei-11472235b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:marktibormezei@email.com" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+  
 </body>
 
 </html>
